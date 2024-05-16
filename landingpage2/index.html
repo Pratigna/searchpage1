@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landingpage2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <h2>HealthSync</h2>
+        <div class="nav-2">
+          <h4>About</h4>
+          <h4>Contact</h4>
+          <button id="loginBtn">Log-In</button>
+          <button id="signupBtn">Sign-UP</button>
+
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left">
+          <div class="left-content">
+            <h1>
+              Let's start cooking with<span>
+                PERSONALIZED TAILORED RECIPES</span
+              >
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              dolorem ullam laborum id sequi esse maxime. Et ipsum maiores
+              harum!
+            </p>
+            <button>Discover Recipes</button>
+          </div>
+        </div>
+        <div class="right">
+          <img
+            src=" Gemini_Generated_Image-removebg-preview.png"
+            alt="recipe-image"
+          />
+
+          <!-- Login Form Pop-up -->
+
+          <div id="loginForm" class="form-popup">
+            <form class="form-container">
+              <h2>Login</h2>
+              <input
+                type="text"
+                placeholder="Enter Your Username"
+                name="username"
+                required
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                name="psw"
+                required
+              />
+
+              <button type="submit" class="btn">Login</button>
+              <button
+                type="button"
+                class="btn cancel"
+                onclick="closeForm('loginForm')"
+              >
+                Close
+              </button>
+            </form>
+          </div>
+
+          <!-- Signup Form Pop-up -->
+          <div id="signupForm" class="form-popup">
+            <form class="form-container">
+              <h2>Sign Up</h2>
+              <input
+                type="text"
+                placeholder="Enter  Your Username"
+                name="username"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Enter Email"
+                name="email"
+                required
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                name="psw"
+                required
+              />
+              <input
+                type="password"
+                placeholder="confirm Password"
+                name="psw"
+                required
+              />
+              <div class="bmi height">
+                <input
+                  type="text"
+                  class="text-input"
+                  id="height"
+                  autocomplete="off"
+                  placeholder="Height (cm)"
+                  required
+                />
+              </div>
+              <div class="bmi wgt">
+                <input
+                  type="text"
+                  class="text-input"
+                  id="weight"
+                  autocomplete="off"
+                  placeholder="Weight (Kg)"
+                  required
+                />
+              </div>
+              <div class="bmi age">
+                <input
+                  type="text"
+                  class="text-input"
+                  id="age"
+                  autocomplete="off"
+                  placeholder="Age (yrs)"
+                  required
+                />
+              </div>
+              <div class="bmi gender">
+                
+                <label class="container">
+                  <input type="radio" name="radio" id="f" />
+                  <p class="text">Female</p>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  <input type="radio" name="radio" id="m" />
+                  <p class="text">Male</p>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="health-label">
+                <label for="health"><b>Health Labels : </b></label>
+                <select name="health" id="health" class="text-input">
+                    <option value="gluten-free">Gluten Free</option>
+                    <option value="diary-free">Diary Free</option>
+                    <option value="egg-free">Egg Free</option>
+                    <option value="sugar-free">Sugar Free</option>
+                </select>
+              </div>
+              <button type="submit" class="btn">Sign Up</button>
+              <button
+                type="button"
+                class="btn cancel"
+                onclick="closeForm('signupForm')"
+              >
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

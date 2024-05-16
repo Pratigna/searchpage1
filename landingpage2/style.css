@@ -1,0 +1,331 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+.nav {
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+    border-bottom: 1px solid #000;
+    border-block-end: 1px solid hsl(11, 3%, 20%);
+    z-index: 4;
+
+}
+
+.nav-2 {
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+
+
+}
+
+.nav h2 {
+    font-size: 1.5vw;
+    font-weight: 700;
+
+}
+
+.nav h4 {
+    font-size: 1.1vw;
+
+
+}
+
+.nav button {
+    font-size: 1vw;
+    padding: 0.7vw 1.4vw;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    /*5*/
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav i {
+
+    font-weight: 800;
+    display: none;
+}
+
+.content {
+    height: calc(100% - 100px);
+    width: 100%;
+    background-color: white;
+    display: flex;
+    position: relative;
+
+}
+
+.left {
+    height: 100%;
+    width: 55%;
+    padding: 5vw 4vw;
+    background-color: white;
+
+}
+
+.left-content {
+    top: 50%;
+    margin-top: 15%;
+
+}
+
+.left h1 {
+    font-size: 4.2vw;
+    line-height: 4.4vw;
+
+}
+
+.left h1 span {
+    color: orangered;
+}
+
+.left p {
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: gray;
+    width: 80%;
+    margin-top: 1.5vw;
+    margin-bottom: 3vw;
+}
+
+.right {
+    height: 90vh;
+    width: 45%;
+
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.content button {
+    font-size: 1.2vw;
+    padding: 1.3vw 2.1vw;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    /*5*/
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bmi {
+    display: flex;
+
+
+}
+
+.text-input {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #dbeffe;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.health-label {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media (max-width:600px) {
+    .nav {
+        padding: 0 6vw;
+        height: 60px;
+
+
+    }
+
+    .nav h2 {
+        font-size: 5.1vw;
+    }
+
+    .nav h4 {
+        font-size: 4vw;
+        display: none;
+
+    }
+
+    .nav button {
+        display: none;
+    }
+
+    .nav i {
+        display: block;
+        font-size: 4.5vw;
+    }
+
+    .content {
+        height: calc(100% - 60px);
+        flex-direction: column;
+
+    }
+
+    .left {
+        width: 100%;
+        height: 45%;
+        padding: 4vw 6vw;
+    }
+
+    .right {
+        width: 100%;
+        height: 55%;
+
+    }
+
+    .left h1 {
+        font-size: 10vw;
+        line-height: 11vw;
+        top: 50vh;
+
+    }
+
+    .left p {
+        font-size: 3vw;
+        width: 90%;
+        margin-top: 5vw;
+        margin-bottom: 6vw;
+
+    }
+
+    .content button {
+        padding: 3vw 6vw;
+        font-size: 3.5vw;
+        border-radius: 25px;
+        font-weight: 600;
+
+    }
+
+    .left-content {
+        top: 50%;
+        margin-top: 5%;
+
+    }
+
+}
+
+/* Add this CSS to style.css */
+/* Your existing styles */
+
+/* Form Pop-up Styles */
+.form-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.gender {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 2rem;
+
+}
+
+.container {
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+    width: 6rem;
+    cursor: pointer;
+    user-select: none;
+    justify-content: space-between;
+  }
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* position: relative; */
+    background-color: #fefefe;
+    /* margin: 10% auto; */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+.form-container .cancel {
+    background-color: orangered;
+}
+
+.form-container .cancel:hover {
+    background-color: #fc4f0f;
+}
+
+@media (max-width: 600px) {
+    /* Additional styles for responsiveness */
+}
